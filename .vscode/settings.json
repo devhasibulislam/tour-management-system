@@ -1,5 +1,8 @@
 {
-  "cSpell.words": ["Hasibul"],
+  "cSpell.words": [
+    "Hasibul",
+    "middlewares"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
