@@ -10,4 +10,11 @@
 * MongoDB
 * Mongoose
 
+## Prerequisite
+Make sure must have installed following `tools`:
+* `Visual Studio Code` Editor
+    * `Prettier` Extension
+    * `ESLint` Extension
+* `Postman` Rest API Client
+
 ## Features
