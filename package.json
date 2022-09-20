@@ -1,7 +1,7 @@
 {
   "name": "tour-management-system",
   "version": "1.0.0",
-  "description": "An assignment for ACC.",
+  "description": "An assignment for ACC with several endpoints.",
   "main": "index.js",
   "scripts": {
     "development": "NODE_ENV=development nodemon index.js",
