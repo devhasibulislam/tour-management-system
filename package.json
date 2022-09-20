@@ -1,0 +1,29 @@
+{
+  "name": "tour-management-system",
+  "version": "1.0.0",
+  "description": "An assignment for ACC.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasibulislam999/tour-management-system.git"
+  },
+  "keywords": [
+    "node-js",
+    "express-js",
+    "mongodb",
+    "mongoose",
+    "async",
+    "await",
+    "promise",
+    "rest-api"
+  ],
+  "author": "Hasibul Islam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hasibulislam999/tour-management-system/issues"
+  },
+  "homepage": "https://github.com/hasibulislam999/tour-management-system#readme"
+}
