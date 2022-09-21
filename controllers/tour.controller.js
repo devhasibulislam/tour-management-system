@@ -36,24 +36,7 @@ async function reformSpecificTour(req, res, next) {
   }
 }
 
-/* delete specific tour */
-async function removeSpecificTour(req, res, next) {
-  try {
-    const result = await tourService.removeSpecificTourService(req.params.id);
-
-    res.status(202).json({
-      acknowledgement: true,
-      message: "Accepted",
-      description: "Required tour deleted from DB",
-      data: result,
-    });
-  } catch (error) {
-    next(error);
-  }
-}
-
 module.exports = {
   displaySpecificTour,
   reformSpecificTour,
-  removeSpecificTour,
 };

@@ -22,15 +22,7 @@ async function reformSpecificTourService(id, data) {
   return result;
 }
 
-/* remove specific tour service */
-async function removeSpecificTourService(id) {
-  const result = await Tour.findByIdAndDelete(id);
-  //   const result = await Tour.deleteMany({});
-  return result;
-}
-
 module.exports = {
   displaySpecificTourService,
   reformSpecificTourService,
-  removeSpecificTourService,
 };
