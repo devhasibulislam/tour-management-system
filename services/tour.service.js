@@ -12,6 +12,16 @@ async function displaySpecificTourService(id) {
   return tour;
 }
 
+/* reform specific tour service */
+async function reformSpecificTourService(id, data) {
+  const result = Tour.updateOne(
+    { _id: id },
+    { $set: data },
+    { runValidators: true }
+  );
+  return result;
+}
+
 /* remove specific tour service */
 async function removeSpecificTourService(id) {
   const result = await Tour.findByIdAndDelete(id);
@@ -19,4 +29,8 @@ async function removeSpecificTourService(id) {
   return result;
 }
 
-module.exports = { displaySpecificTourService, removeSpecificTourService };
+module.exports = {
+  displaySpecificTourService,
+  reformSpecificTourService,
+  removeSpecificTourService,
+};

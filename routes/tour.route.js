@@ -11,6 +11,7 @@ const router = express.Router();
 router
   .route("/:id")
   .get(tourController.displaySpecificTour)
+  .patch(tourController.reformSpecificTour)
   .delete(tourController.removeSpecificTour);
 
 module.exports = router;

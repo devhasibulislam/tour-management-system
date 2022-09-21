@@ -17,6 +17,25 @@ async function displaySpecificTour(req, res, next) {
   }
 }
 
+/* update specific tour */
+async function reformSpecificTour(req, res, next) {
+  try {
+    const result = await tourService.reformSpecificTourService(
+      req.params.id,
+      req.body
+    );
+
+    res.status(202).json({
+      acknowledgement: true,
+      message: "Accepted",
+      description: "Reforming specific tour in DB",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
 /* delete specific tour */
 async function removeSpecificTour(req, res, next) {
   try {
@@ -33,4 +52,8 @@ async function removeSpecificTour(req, res, next) {
   }
 }
 
-module.exports = { displaySpecificTour, removeSpecificTour };
+module.exports = {
+  displaySpecificTour,
+  reformSpecificTour,
+  removeSpecificTour,
+};
