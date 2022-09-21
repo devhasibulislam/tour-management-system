@@ -4,6 +4,10 @@
   "description": "An assignment for ACC with several endpoints.",
   "main": "index.js",
   "type": "commonjs",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "scripts": {
     "start": "node index.js"
   },
