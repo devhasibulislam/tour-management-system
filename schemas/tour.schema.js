@@ -11,10 +11,10 @@ const mongoose = require("mongoose");
 /* creating schema */
 const tourSchema = mongoose.Schema(
   {
-    thumbnail: {
+    image: {
       type: String,
-      required: [true, "Provide a thumbnail on this tour"],
-      unique: [true, "Already exists, provide a new tour thumbnail"],
+      required: [true, "Provide an image on this tour"],
+      unique: [true, "Already exists, provide a new tour image"],
     },
     name: {
       type: String,
