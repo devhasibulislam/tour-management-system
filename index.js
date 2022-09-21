@@ -13,7 +13,7 @@ require("dotenv").config();
 /* internal imports */
 const errorHandler = require("./middlewares/error.middleware");
 const dbConnection = require("./utils/db.util");
-const router = require("./routes/tour.route");
+const toursRouter = require("./routes/tours.route");
 
 /* application connection */
 const app = express();
@@ -24,7 +24,7 @@ app.use(cors());
 app.use(express.json());
 
 /* router connection */
-app.use(router);
+app.use("/tours", toursRouter);
 
 /* global error handler */
 app.use(errorHandler);
@@ -33,7 +33,7 @@ app.use(errorHandler);
 dbConnection();
 
 /* enable backend */
-app.get("/", (req, res, next) => {
+app.get("/", (req, res) => {
   res.status(200).json({
     acknowledgement: true,
     title: "Tour Management System",
