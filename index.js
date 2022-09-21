@@ -13,6 +13,7 @@ require("dotenv").config();
 /* internal imports */
 const errorHandler = require("./middlewares/error.middleware");
 const dbConnection = require("./utils/db.util");
+const router = require("./routes/tour.route");
 
 /* application connection */
 const app = express();
@@ -23,6 +24,7 @@ app.use(cors());
 app.use(express.json());
 
 /* router connection */
+app.use(router);
 
 /* global error handler */
 app.use(errorHandler);
