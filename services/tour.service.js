@@ -22,7 +22,14 @@ async function reformSpecificTourService(id, data) {
   return result;
 }
 
+/* trending tour services */
+async function trendingTourServices() {
+  const result = await Tour.find({}).sort("-views");
+  return result.slice(0, 3);
+}
+
 module.exports = {
   displaySpecificTourService,
   reformSpecificTourService,
+  trendingTourServices,
 };

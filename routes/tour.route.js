@@ -8,6 +8,8 @@ const tourController = require("../controllers/tour.controller");
 const router = express.Router();
 
 /* router credentials */
+router.get("/trending", tourController.trendingTours);
+
 router
   .route("/:id")
   .get(tourController.displaySpecificTour)

@@ -36,7 +36,24 @@ async function reformSpecificTour(req, res, next) {
   }
 }
 
+/* trending tours */
+async function trendingTours(req, res, next) {
+  try {
+    const result = await tourService.trendingTourServices();
+
+    res.status(200).json({
+      acknowledgement: true,
+      message: "OK",
+      description: "Fetching trending data from DB",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
 module.exports = {
   displaySpecificTour,
   reformSpecificTour,
+  trendingTours,
 };
