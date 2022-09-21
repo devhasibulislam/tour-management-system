@@ -14,6 +14,7 @@ require("dotenv").config();
 const errorHandler = require("./middlewares/error.middleware");
 const dbConnection = require("./utils/db.util");
 const toursRouter = require("./routes/tours.route");
+const tourRouter = require("./routes/tour.route");
 
 /* application connection */
 const app = express();
@@ -25,6 +26,7 @@ app.use(express.json());
 
 /* router connection */
 app.use("/tours", toursRouter);
+app.use("/tour", tourRouter);
 
 /* global error handler */
 app.use(errorHandler);
