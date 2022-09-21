@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 
 function dbConnection() {
   mongoose
-    .connect(process.env.DB_LOCAL, {
+    .connect(process.env.DB_URI, {
+      dbName: "tour-management-system",
       useUnifiedTopology: true,
       useNewUrlParser: true,
     })
