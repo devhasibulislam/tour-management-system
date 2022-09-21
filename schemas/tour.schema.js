@@ -77,6 +77,10 @@ const tourSchema = mongoose.Schema(
           "Transport {VALUE} is invalid - By Bus/Train/Air/Boat/Car/Aerial Tramways",
       },
     },
+    views: {
+      type: Number,
+      default: 0
+    },
     createdAt: {
       type: Date,
       default: Date.now,
