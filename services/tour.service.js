@@ -4,12 +4,16 @@ const Tour = require("../schemas/tour.schema");
 /* display specific tour service */
 async function displaySpecificTourService(id) {
   const tour = await Tour.findById(id);
-  const result = await Tour.updateOne(
+  let result = await Tour.updateOne(
     { _id: id },
     { $set: { views: tour.views + 1 } }
   );
 
-  return tour;
+  if (result.modifiedCount) {
+    result = await Tour.findById(id);
+  }
+
+  return result;
 }
 
 /* reform specific tour service */
