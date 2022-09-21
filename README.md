@@ -18,3 +18,11 @@ Make sure must have installed following `tools`:
 * `Postman` Rest API Client
 
 ## Features
+
+## Owing
+```bash
+git clone https://github.com/hasibulislam999/tour-management-system.git
+npm install --force
+cd tour-management-system
+code .
+```
