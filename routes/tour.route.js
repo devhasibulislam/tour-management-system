@@ -9,6 +9,7 @@ const router = express.Router();
 
 /* router credentials */
 router.get("/trending", tourController.trendingTours);
+router.get("/cheapest", tourController.cheapestTours);
 
 router
   .route("/:id")

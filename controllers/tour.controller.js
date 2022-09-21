@@ -52,8 +52,25 @@ async function trendingTours(req, res, next) {
   }
 }
 
+/* cheapest tours */
+async function cheapestTours(req, res, next) {
+  try {
+    const result = await tourService.cheapestTourServices();
+
+    res.status(200).json({
+      acknowledgement: true,
+      message: "OK",
+      description: "Fetching cheapest tours from DB",
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
 module.exports = {
   displaySpecificTour,
   reformSpecificTour,
   trendingTours,
+  cheapestTours,
 };

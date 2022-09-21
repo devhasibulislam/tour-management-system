@@ -28,8 +28,15 @@ async function trendingTourServices() {
   return result.slice(0, 3);
 }
 
+/* cheapest tour services */
+async function cheapestTourServices() {
+  const result = await Tour.find({}).sort("price");
+  return result.slice(0, 3);
+}
+
 module.exports = {
   displaySpecificTourService,
   reformSpecificTourService,
   trendingTourServices,
+  cheapestTourServices,
 };
