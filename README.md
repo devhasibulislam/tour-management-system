@@ -23,8 +23,8 @@ Make sure must have installed following `tools`:
 
 ## Features
 
-- Initial request: `http://localhost:8080/`
-- Insert new tour: `http://localhost:8080/tours/`
+- Initial request: `https://tms-tour-management-system.herokuapp.com/`
+- Insert new tour: `https://tms-tour-management-system.herokuapp.com/tours/`
 
 ```bash
 {
@@ -39,10 +39,10 @@ Make sure must have installed following `tools`:
 }
 ```
 
-- Display tours without queries: `http://localhost:8080/tours`
-- Display tours with queries: `http://localhost:8080/tours?fields=name,price,ratings,-_id&sort=-price&page=3&limit=5`
-- Display specific tour: `http://localhost:8080/tour/632a9d7d34070a01a882c04e`
-- Reform specific tour: `http://localhost:8080/tour/632a9d7d34070a01a882c047`
+- Display tours without queries: `https://tms-tour-management-system.herokuapp.com/tours`
+- Display tours with queries: `https://tms-tour-management-system.herokuapp.com/tours?fields=name,price,ratings,-_id&sort=-price&page=3&limit=5`
+- Display specific tour: `https://tms-tour-management-system.herokuapp.com/tour/632a9d7d34070a01a882c04e`
+- Reform specific tour: `https://tms-tour-management-system.herokuapp.com/tour/632a9d7d34070a01a882c047`
 
 ```bash
 {
@@ -57,8 +57,8 @@ Make sure must have installed following `tools`:
 }
 ```
 
-- Display trending tours: `http://localhost:8080/tour/trending`
-- Display cheapest tours: `http://localhost:8080/tour/cheapest`
+- Display trending tours: `https://tms-tour-management-system.herokuapp.com/tour/trending`
+- Display cheapest tours: `https://tms-tour-management-system.herokuapp.com/tour/cheapest`
 
 ## Owing
 
