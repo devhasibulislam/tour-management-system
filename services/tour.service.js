@@ -1,6 +1,7 @@
 /* internal import */
 const Tour = require("../schemas/tour.schema");
 
+/* display specific tour service */
 async function displaySpecificTourService(id) {
   const tour = await Tour.findById(id);
   const result = await Tour.updateOne(
@@ -11,4 +12,11 @@ async function displaySpecificTourService(id) {
   return tour;
 }
 
-module.exports = { displaySpecificTourService };
+/* remove specific tour service */
+async function removeSpecificTourService(id) {
+  const result = await Tour.findByIdAndDelete(id);
+  //   const result = await Tour.deleteMany({});
+  return result;
+}
+
+module.exports = { displaySpecificTourService, removeSpecificTourService };

@@ -8,6 +8,9 @@ const tourController = require("../controllers/tour.controller");
 const router = express.Router();
 
 /* router credentials */
-router.route("/:id").get(tourController.displaySpecificTour);
+router
+  .route("/:id")
+  .get(tourController.displaySpecificTour)
+  .delete(tourController.removeSpecificTour);
 
 module.exports = router;
