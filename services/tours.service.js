@@ -14,7 +14,7 @@ async function displayAllTourServices(queries) {
   const result = await Tour.find({})
     .select(queries.fields?.split(",")?.join(" "))
     .sort(queries.sort)
-    .skip(Number(queries.page) - 1)
+    .skip(Number(queries.page) - 1 - limit)
     .limit(Number(queries.limit));
 
   return result;
