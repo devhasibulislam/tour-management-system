@@ -7,12 +7,13 @@
 
 /* external imports */
 const express = require("express");
+const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
 /* internal imports */
 const errorHandler = require("./middlewares/error.middleware");
-const dbConnection = require("./utils/db.util");
+// const dbConnection = require("./utils/db.util");
 const toursRouter = require("./routes/tours.route");
 const tourRouter = require("./routes/tour.route");
 
@@ -32,7 +33,16 @@ app.use("/tour", tourRouter);
 app.use(errorHandler);
 
 /* DB connection */
-dbConnection();
+// dbConnection();
+mongoose
+  .connect(process.env.DB_URI, {
+    dbName: "tour-management-system",
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    console.log("TMS connect with MongoDB through Mongoose.");
+  });
 
 /* enable backend */
 app.get("/", (req, res) => {
